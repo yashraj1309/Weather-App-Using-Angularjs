@@ -43,9 +43,6 @@
 								</div>
 								<button type="submit" class="btn btn-info" ng-click="searchWeather()">Submit</button>
 							</form>
-							<ul class="nav navbar-nav navbar-right">
-								<li><a>{{totalCount}} Results Found</a></li>
-							</ul>
 						</div>
 					</div>
 				</nav>
@@ -62,11 +59,11 @@
 									</a>
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">{{item.name}}, {{item.sys.country}}</h4>
-									<h4><span class="label label-primary">{{item.main.temp}}°С</span></h4>
-									<span>{{item.weather[0].description}}</span><br>
-									<span>Max Temp: {{item.main.temp_max}}°С</span><br>
-									<span>Min Temp: {{item.main.temp_min}}°</span><br>
+									<h4 class="media-heading">{{items.location.name}}, {{items.location.country}}</h4>
+									<h4><span class="label label-primary">{{items.current.feelslike_c}}°С</span></h4>
+									<span><strong>{{items.current.condition.text}}</strong> <img src="{{items.current.condition.icon}}"></span><br>
+									<!-- <span>Max Temp: {{item.main.temp_max}}°С</span><br> -->
+									<!-- <span>Min Temp: {{item.main.temp_min}}°</span><br> -->
 								</div>
 							</div>
 						</div>
